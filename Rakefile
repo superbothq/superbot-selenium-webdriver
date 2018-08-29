@@ -15,6 +15,8 @@ else
   task default: [:chromedriver]
 
   task :chromedriver do
+    require_relative "lib/superbot"
+
     download_done = false
 
     print "🤖 downloading chromedriver "

@@ -1,6 +1,6 @@
 RSpec.describe Superbot::Selenium::WebDriver do
   it do
-    expect(Superbot::Selenium::WebDriver::VERSION).to eq "314.1.0"
+    expect(Superbot::Selenium::WebDriver::VERSION).not_to be_nil
   end
 
   it "uses chromedriver-helper" do

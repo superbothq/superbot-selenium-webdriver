@@ -1,7 +1,7 @@
 module Superbot
   module Selenium
     module WebDriver
-      VERSION = "314.1.0"
+      VERSION = "314.2.0"
     end
   end
 end

@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.extensions << 'Rakefile'
   spec.add_runtime_dependency "chromedriver-helper", "1.2.0"
   spec.add_runtime_dependency "selenium-webdriver", "3.14.0"
 

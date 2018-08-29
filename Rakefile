@@ -1,25 +1,33 @@
 STDOUT.sync = true
 
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
+def in_gem_install?
+  ENV["RUBYLIBDIR"] && ENV["RUBYARCHDIR"]
+end
 
-RSpec::Core::RakeTask.new(:spec)
+unless in_gem_install?
+  require "bundler/gem_tasks"
+  require "rspec/core/rake_task"
 
-task default: [:chromedriver]
+  RSpec::Core::RakeTask.new(:spec)
 
-task :chromedriver do
-  download_done = false
+  task default: [:spec]
+else
+  task default: [:chromedriver]
 
-  print "🤖 downloading chromedriver "
-  Thread.new do
-    loop do
-      break if download_done
-      print "."
-      sleep 0.5
+  task :chromedriver do
+    download_done = false
+
+    print "🤖 downloading chromedriver "
+    Thread.new do
+      loop do
+        break if download_done
+        print "."
+        sleep 0.5
+      end
     end
-  end
-  Superbot::Selenium::WebDriver.install_chromedriver_helper!
+    Superbot::Selenium::WebDriver.install_chromedriver_helper!
 
-  download_done = true
-  puts " done"
+    download_done = true
+    puts " done"
+  end
 end

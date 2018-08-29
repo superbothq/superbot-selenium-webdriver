@@ -1,5 +1,5 @@
-require_relative "selenium/version"
-require_relative "selenium/webdriver"
+require_relative "superbot/selenium/version"
+require_relative "superbot/selenium/webdriver"
 
 module Superbot
 end

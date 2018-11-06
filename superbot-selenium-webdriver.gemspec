@@ -1,8 +1,9 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 require "superbot/selenium/version"
-#require "superbot/selenium/webdriver"
+require "superbot/selenium/webdriver/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "superbot-selenium-webdriver"

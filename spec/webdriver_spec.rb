@@ -3,11 +3,8 @@ RSpec.describe Superbot::Selenium::WebDriver do
     expect(Superbot::Selenium::WebDriver::VERSION).not_to be_nil
   end
 
-  it "uses chromedriver-helper" do
-    Superbot::Selenium::WebDriver.use_chromedriver_helper!
-
-    options = Selenium::WebDriver::Chrome::Options.new
-    driver = Selenium::WebDriver.for :chrome, options: options
-    driver.navigate.to "http://example.com"
+  it "launches browser" do
+    driver = Selenium::WebDriver.for :chrome
+    driver.navigate.to "about:blank"
   end
 end

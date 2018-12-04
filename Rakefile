@@ -20,5 +20,5 @@ unless in_gem_install?
 
   task default: [:spec]
 else
-  task default: [:install_chromedriver]
+  task default: ["install:chromedriver"]
 end

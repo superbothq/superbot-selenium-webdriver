@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    superbot-selenium-webdriver (314.3.1)
+    superbot-selenium-webdriver (314.3.2)
       chromedriver-helper (= 2.1.0)
       selenium-webdriver (= 3.141.0)
 

@@ -7,7 +7,7 @@ end
 namespace :install do
   desc "install chromedriver now"
   task :chromedriver do
-    require_relative "lib/superbot"
+    require_relative "lib/superbot/selenium"
     Superbot::Selenium::WebDriver.install_chromedriver_helper!
   end
 end

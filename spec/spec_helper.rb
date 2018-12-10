@@ -1,5 +1,5 @@
 require "bundler/setup"
-require_relative "../lib/superbot"
+require_relative "../lib/superbot/selenium"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

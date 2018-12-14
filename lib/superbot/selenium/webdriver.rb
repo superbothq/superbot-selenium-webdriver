@@ -1,5 +1,5 @@
-require "chromedriver-helper"
 require "selenium-webdriver"
+require "chromedriver-helper"
 
 module Superbot
   module Selenium

@@ -2,7 +2,6 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "superbot/selenium/version"
-require "superbot/selenium/webdriver"
 
 Gem::Specification.new do |spec|
   spec.name          = "superbot-selenium-webdriver"
@@ -19,8 +18,10 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.post_install_message = "#{Superbot::Selenium::WebDriver.install_chromedriver_helper!}"
-  #spec.extensions << 'Rakefile'
+
+  spec.extensions = %w[ext/superbot-selenium-webdriver/extconf.rb]
+  spec.post_install_message = "Installed chromedriver 2.44 to #{ENV['HOME']}/.chromedriver-helper"
+
   spec.add_runtime_dependency "chromedriver-helper", "2.1.0"
   spec.add_runtime_dependency "selenium-webdriver", "3.141.0"
 

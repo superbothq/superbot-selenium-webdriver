@@ -1,9 +1,8 @@
 PATH
   remote: .
   specs:
-    superbot-selenium-webdriver (1.0.2)
+    superbot-selenium-webdriver (1.0.3)
       chromedriver-helper (= 2.1.0)
-      rake (~> 10.0)
       selenium-webdriver (= 3.141.0)
 
 GEM
@@ -46,6 +45,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.15)
+  rake (~> 10.0)
   rspec (~> 3.8)
   superbot-selenium-webdriver!
 

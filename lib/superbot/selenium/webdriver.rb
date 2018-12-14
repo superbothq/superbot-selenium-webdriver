@@ -5,7 +5,10 @@ module Superbot
   module Selenium
     module WebDriver
       def self.install_chromedriver_helper!
-        Chromedriver.set_version "2.44"
+        version="2.44"
+        Chromedriver.set_version version
+        binary_path = Chromedriver::Helper.new.binary_path
+        "installed chromedriver-helper version #{version} to #{binary_path}"
       end
     end
   end

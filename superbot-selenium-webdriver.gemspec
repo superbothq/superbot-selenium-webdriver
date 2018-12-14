@@ -23,8 +23,8 @@ Gem::Specification.new do |spec|
   spec.extensions << 'Rakefile'
   spec.add_runtime_dependency "chromedriver-helper", "2.1.0"
   spec.add_runtime_dependency "selenium-webdriver", "3.141.0"
+  spec.add_dependency "rake", "~> 10.0"
 
-  spec.add_development_dependency "bundler", "~> 1.17"
-  spec.add_development_dependency "rake", "~> 11.3"
+  spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rspec", "~> 3.8"
 end
